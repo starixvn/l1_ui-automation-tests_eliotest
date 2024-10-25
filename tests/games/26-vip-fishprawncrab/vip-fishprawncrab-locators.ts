@@ -1,0 +1,18 @@
+import { Components } from "sc-automation-core";
+
+export const VIPFPCLocators = [
+    new Components.ImageLocator("dealer", 560, 13, 180, 150),
+    new Components.ImageLocator("mountainChoice", 461, 413, 174, 94),
+    new Components.ImageLocator("oceanChoice", 653, 413, 174, 94),
+    new Components.ImageLocator("hamburgerMenu", 28, 155, 40, 40),
+    new Components.ImageLocator("historyMenu", 28, 347, 44, 44),
+    new Components.ImageLocator("historyPopup", 564, 71, 150, 35),
+    new Components.ImageLocator("stake10", 467, 618, 0, 0),
+    new Components.ImageLocator("stake5", 467, 618, 0, 0),
+    new Components.ImageLocator("stake50", 467, 618, 0, 0),
+    new Components.ImageLocator("errorMessage", 410, 532, 450, 30),
+    new Components.ImageLocator("msgMaxbetLimit", 472, 530, 350, 22),
+    new Components.ImageLocator("btnRightArrow", 960, 600, 35, 35),
+    new Components.ImageLocator("guideMenu", 41, 421, 14, 19),
+    new Components.ImageLocator("outside", 5, 5, 5, 5),
+];

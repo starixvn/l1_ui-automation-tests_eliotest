@@ -1,0 +1,47 @@
+import { Components } from "sc-automation-core";
+
+export const BlockchainBaccaratConfigs: Components.GameConfiguration = {
+  id: 48,
+  name: "BlockchainBaccarat",
+  durations: {
+    wholeRound: 48 * 1000,
+    placingBets: 30 * 1000,
+    lockingBet: 5 * 1000,
+    shakeThePlateDuration: 13 * 1000,
+  },
+  choices: [
+    "player",
+    "banker",
+    "tie",
+    "big",
+    "small",
+    "playerPair",
+    "bankerPair",
+    "natural",
+  ],
+  hedgeBetGroups: [["player", "banker"]],
+  maxTimeout: 300 * 1000, // miliseconds,
+  odds: {
+    player: 2,
+    banker: 1.95,
+    big: 1.54,
+    small: 2.5,
+    tie: 9,
+    playerPair: 12,
+    bankerPair: 12,
+  },
+  betBoard: false,
+  accounts: {
+    local: "222260",
+    local1: "222260",
+    local2: "222260",
+    local3: "222260",
+    sit: "supertestsaba70",
+    uat: "IT58Test789",
+    prod: "supertestte120201002",
+    l2uat: "TestSep2745",
+    l2prod: "VNtest044",
+  },
+  productId: { l1: "1655", l2: 3847 },
+
+};

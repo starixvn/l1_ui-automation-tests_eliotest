@@ -1,0 +1,48 @@
+import { Components } from "sc-automation-core";
+const ImageLocator = Components.ImageLocator;
+
+export const extVipSedieLocators = [
+  new ImageLocator("imgdealer", 569, 20, 146, 150),
+  new ImageLocator("evenChoice", 185, 285, 140, 50),
+  new ImageLocator("evenOwnbet", 328, 370, 30, 30),
+  new ImageLocator("oddChoice", 743, 269, 75, 75),
+  new ImageLocator("oddOwnbetl1", 909, 370, 30, 22),
+  new ImageLocator("oddOwnbetl2",  909, 370, 30, 22),
+  new ImageLocator("red2Choice", 563, 436, 35, 90),
+  new ImageLocator("red2Ownbet", 630, 484, 30, 30),
+  new ImageLocator("red3Choice", 385, 432, 32, 90),
+  new ImageLocator("red3Ownbet", 464,  439, 35, 90),
+  new ImageLocator("red4Choice", 186, 436, 30, 85),
+  new ImageLocator("red4Ownbet", 294,  484, 30, 30),
+  new ImageLocator("white3Choice", 746, 436, 30, 90),
+  new ImageLocator("white3Ownbet", 800,  484, 30, 30),
+  new ImageLocator("white4Choice", 924, 436, 30, 85),
+  new ImageLocator("white4Ownbet", 967, 484, 30, 30),
+  new ImageLocator("defaultChipBarl1", 306, 585, 670, 70),
+  new ImageLocator("defaultChipBarl2", 306, 585, 670, 70),
+  new ImageLocator("btnHome", 33, 71, 35, 35),
+  new ImageLocator("hamburgerMenu",24, 146, 51, 56),
+  new ImageLocator("historyMenu", 52, 345, 24, 24),
+  new ImageLocator("historyPopup", 465, 70, 609, 186),
+  new ImageLocator("guideMenu", 52, 400, 20, 20),
+  new ImageLocator("stake1", 394, 606, 55, 55),
+  new ImageLocator("stake10", 394, 606, 55, 55),
+  new ImageLocator("errorMessage", 459, 520, 380, 37),
+  new ImageLocator("lblHistoryFirstRow", 68, 185, 1148, 37),
+  new ImageLocator("locHistoryRoundId", 246, 190, 80, 30),
+  new ImageLocator("lblRoundIdOnTable", 330, 200, 100, 20),
+  new ImageLocator("oddBar", 888, 565, 16, 16),
+  new ImageLocator("evenBar", 888, 565, 16, 16),
+  new ImageLocator("btnClosePopup", 5, 5, 10, 10),
+  new ImageLocator("btnRightArrow", 911, 605, 40, 40),
+  new ImageLocator("btnLeftArrow", 330, 605, 40, 40),
+  new ImageLocator("msgMaxbetred4l1", 459, 520, 380, 37),
+  new ImageLocator("msgMaxbetred3l1", 459, 520, 380, 37),
+  new ImageLocator("msgMaxbetred2l1", 459, 520, 380, 37),
+  new ImageLocator("msgMaxbetwhite3l1", 459, 520, 380, 37),
+  new ImageLocator("msgMaxbetwhite4l1", 459, 520, 380, 37),
+
+];
+
+export const VipSedieLocators = extVipSedieLocators.concat(Components.BaseLocator.GameLobbyLocator)
+

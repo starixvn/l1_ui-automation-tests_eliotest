@@ -1,0 +1,4 @@
+[submodule "sc-automation-core"]
+	path = sc-automation-core
+	url = https://git3.nexdev.net/l1/ui-automation-tests/packages/sc-automation-core.git
+	branch = dev

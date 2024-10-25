@@ -1,0 +1,13 @@
+.DS_Store
+**/node_modules
+
+.idea
+/test-results/
+/playwright-report/
+/playwright/.cache/
+/screenshots/
+test-results.json
+guidecontent.txt
+imgcapcha.png
+allure-results/
+allure-report/

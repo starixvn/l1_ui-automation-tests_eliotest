@@ -1,0 +1,53 @@
+import { KenoLocators } from "../keno-mini2-locators";
+import { KenoConfigs } from "../keno-mini2-configs";
+import { SmokeBases ,Components} from "sc-automation-core";
+
+class SedieSmokeSpec extends SmokeBases.MobiGameBase {
+  /**
+   *
+   */
+  constructor() {
+    const smokeOptions: SmokeBases.IBaseOptions = {
+      gameConfiguration: KenoConfigs,
+      locators: KenoLocators,
+      waitBetTimeout: 5000,
+      placeBetChoices: KenoConfigs.choices,
+      snapshotFolderPath: __filename,
+      placeBetAmount: 10,
+    };
+
+    super(smokeOptions);
+  }
+  protected inGameUITests(): void {
+    Components.test("Verify Game Name and Bet Locators", async () => {
+      // Arrange
+      Components.test.setTimeout(this.options.gameConfiguration.maxTimeout);
+      await this.game.waitForTimeout(this.options.waitBetTimeout);
+      const isFrame = await this.game.page.$("#frmGame")
+      console.log(isFrame+ "55555555");
+      
+      if (isFrame) {
+          await this.game.page.frameLocator("#frmGame").locator("//div[contains(@class,'game-category_category')][text()='Mega Keno']").click()
+          await this.game.waitForTimeout(3000)
+          const iframe = await this.game.page.frameLocator("#frmGame");
+          const disconnect = await iframe.locator(this.options.locators.disconectError).isVisible();
+          if  (disconnect) {
+            await iframe.locator(this.options.locators.reconnectButton).click();
+            await this.game.waitForTimeout(3000)
+          }
+          await this.game.verifyFrameLocatorsVisible("#frmGame",this.options.locators.inGameUI);
+
+      }else{
+          const disconnect = await this.game.page.$(this.options.locators.disconectError)
+          if  (disconnect) {
+            await this.game.page.click(this.options.locators.reconnectButton)
+            await this.game.waitForTimeout(3000)
+          }
+          await this.game.verifyLocatorsVisible(this.options.locators.inGameUI);
+          await this.game.page.reload(); // L1 PRO issue only: need to be reload page for capturing web socket data, by default on framerecived do not have any channel
+      }
+  });
+  }
+}
+
+new SedieSmokeSpec().start();

@@ -1,0 +1,47 @@
+import { Components } from "sc-automation-core";
+
+export const VipBaccaratConfigs: Components.GameConfiguration = {
+  id: 27,
+  name: "VipBaccarat",
+  durations: {
+    wholeRound: 45 * 1000,
+    placingBets: 30 * 1000,
+    lockingBet: 5 * 1000,
+    shakeThePlateDuration: 10 * 1000,
+  },
+  choices: [
+    "player",
+    "banker",
+    "tie",
+    "big",
+    "small",
+    "playerPair",
+    "bankerPair",
+    "natural",
+  ],
+  hedgeBetGroups: [["big", "small"]],
+  maxTimeout: 200 * 1000, // miliseconds,
+  odds: {
+    player: 2,
+    banker: 1.95,
+    big: 1.54,
+    small: 2.5,
+    tie: 9,
+    playerPair: 12,
+    bankerPair: 12,
+  },
+  betBoard: false,
+  accounts: {
+    local: "222245",
+    local1: "222245",
+    local2: "222245",
+    local3: "222245",
+    sit: "supertestsaba70",
+    uat: "IT58Test789",
+    prod: "supertestte120201011",
+    l2uat: "TestSep2744",
+    l2prod: "VNtest040",
+  },
+  productId: { l1: "1638", l2: 3827 },
+
+};

@@ -1,0 +1,11 @@
+docker-build-game-9:
+  extends: docker-build
+  variables:
+    GAMEID: 9
+  rules:
+    - if: $TRIGGER != "true"
+      changes:
+        - tests/games/9*/**/*
+        - package.json
+        - playwright.config.ts
+        - Dockerfile
